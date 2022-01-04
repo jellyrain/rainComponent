@@ -1,6 +1,10 @@
-export function give(element, options) {
+import { scrollOptions } from './interface'
+import styles from './scroll.scss'
+const { rainbow } = styles
+
+function give(element: HTMLDivElement, options: scrollOptions): void {
     if (options.style === 'rainbow-gradient') {
-        element.classList.add('rainbow-gradient')
+        element.classList.add(rainbow)
     }
     if (options.style === 'gradient') {
         element.style.background = `linear-gradient(to top, ${options.colour[0]}, ${options.colour[1]})`
@@ -13,3 +17,4 @@ export function give(element, options) {
         element.style.height = height + '%'
     }
 }
+export { give }
