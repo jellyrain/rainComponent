@@ -1,5 +1,5 @@
 import styles from './music.scss'
-const { music, fixed, card, cover, play, info, infoTop, infoBottom, title, button, bar, played, volumeWrap, volumeBar, volumePlayed, close, songList } = styles
+const { music, fixed, card, cover, play, info, infoTop, infoBottom, title, button, bar, played, playedIcon, volumeWrap, volumeBar, volumePlayed, close, songList } = styles
 
 const template = /* html */`
 <section id="${music}" ref="jellyrain_music">
@@ -9,7 +9,7 @@ const template = /* html */`
         </div>
         <div class="${info}" ref="info">
             <div class="${infoTop}" ref="infoTop">
-                <div class="${title}"ref="title"></div>
+                <div class="${title}" ref="title"></div>
                 <div class="${button}" ref="button">
                   <i class="iconfont icon-diyiyeshouyeshangyishou" ref="backward"></i>
                   <i class="iconfont icon-zuihouyiyemoyexiayishou" ref="forward"></i>
@@ -19,7 +19,7 @@ const template = /* html */`
             <div class="${infoBottom}" ref="infoBottom">
                 <div class="${bar}" ref="bar">
                     <div class="${played}" ref="played">
-                        <span class="${played}" ref="played"></span>
+                        <span class="${playedIcon}" ref="playedIcon"></span>
                     </div>
                 </div>
                 <div class="${volumeWrap}" ref="volumeWrap">

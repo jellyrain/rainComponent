@@ -3,7 +3,7 @@ import styles from './music.scss'
 const { pause, play, select, closed } = styles
 
 function give(doc: any, songList: songInterface[]) {
-    const audio = doc.createAudio
+    const audio = new Audio()
 
     // 播放 暂停
     let playPause = false
@@ -29,7 +29,7 @@ function give(doc: any, songList: songInterface[]) {
 
     // 播放进度条
     setInterval(() => {
-        var ratio = audio.currentTime / audio.duration
+        let ratio = audio.currentTime / audio.duration
         doc.played.style.width = ratio * 100 + '%'
     }, 100)
 
